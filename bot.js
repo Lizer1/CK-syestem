@@ -379,10 +379,6 @@ client.on('message', message => {
 
   ** -emoji <any things> | لتحويل اي كلمه تقولها الي ايموجي**:small_orange_diamond: 
 
-  ** -inv | لدعوة البوت الى سيرفرك**:black_circle: 
-
-  ** -support | سيرفر الدعم**:wrench:  :envelope_with_arrow: 
-  
   ** -contact | ارسال اقتراح او لمراسلة صاحب البوت**
   
 **  ======:blossom:نــتــمــنــآ لــكــم آســتــمـــتــآع :blossom:======  **`)
@@ -397,7 +393,7 @@ client.on('message', message => {
       if (message.content === "-help-a") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
+           .setFooter('BY LiZer-PRO')
            .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
      message.author.sendEmbed(embed)
      
@@ -409,7 +405,7 @@ client.on('message', message => {
       if (message.content === "-help-g") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
+           .setFooter('BY LiZer-PR')
            .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
      message.author.sendEmbed(embed)
      
@@ -421,7 +417,7 @@ client.on('message', message => {
       if (message.content === "-help-m") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
+           .setFooter('BY LiZer-PRBY LiZer-PR')
            .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
      message.author.sendEmbed(embed)
      
@@ -433,7 +429,7 @@ client.on('message', message => {
       if (message.content === "-help-p") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
+           .setFooter('BY LiZer-PR')
            .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
      message.author.sendEmbed(embed)
      
@@ -1122,7 +1118,7 @@ client.on('message', message => {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ - ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | LEGEND_YT#4537 ')
+			      .setFooter('BY LiZer_PRO')
     })
 }
 });
@@ -1709,7 +1705,7 @@ msg.channel.send(embed).then(() => {
 
 client.on('ready', function(){	
     var ms = 40000 ;	
-    var setGame = ['-inv','-help'];	
+    var setGame = ['BY LiZer_PRO','-help'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -1912,7 +1908,7 @@ client.on('message', msg => {
   command = command.slice(prefix.length);
   let args = msg.content.split(" ").slice(1);
 
-    if(command === "clr") {
+    if(command === "c") {
         const emoji = client.emojis.find("name", "wastebasket")
     let textxt = args.slice(0).join("");
     if(msg.member.hasPermission("MANAGE_MESSAGES")) {
@@ -2484,18 +2480,7 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
 
-client.on('message', message => {
-        if (message.content === "-inv") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`:small_orange_diamond: اضغط هنا `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=466256531998900246&permissions=8&scope=bot`)
-        .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
-     message.channel.sendEmbed(embed);
-       }
-   });
- 
+
 
 client.on('message', message => {
     if(message.content.includes('discord.gg')){
@@ -2685,153 +2670,11 @@ if (err) console.error(err);
 })
     })
  
-    client.on("message", message => {
-  if (message.author.bot) return;
-    if(!message.channel.guild) return;
-if (message.content.startsWith(prefix + "profile")) {
-                               let user = message.mentions.users.first();
-         var men = message.mentions.users.first();
-            var heg;
-            if(men) {
-                heg = men
-            } else {
-                heg = message.author
-            }
-          var mentionned = message.mentions.members.first();
-             var h;
-            if(mentionned) {
-                h = mentionned
-            } else {
-                h = message.member
-            }
-            var ment = message.mentions.users.first();
-            var getvalueof;
-            if(ment) {
-              getvalueof = ment;
-            } else {
-              getvalueof = message.author;
-            }
-   var mentionned = message.mentions.users.first();
- 
-    var client;
-      if(mentionned){
-          var client = mentionned;
-      } else {
-          var client = message.author;
- 
-      }
-if (!profile[getvalueof.id]) profile[getvalueof.id] = {points: 0,reps: "NOT YET",credits: 1, level: 1,tite: "HypeLC User", rep: 0, lastDaily: "NOT COLLECTED"};
-            let Image = Canvas.Image,
-            canvas = new Canvas(300, 300),
-            ctx = canvas.getContext('2d');
-            fs.readFile("Super.png", function (err, Background) { //امتداد الصورة
-            if (err) return console.log(err);
-            let BG = Canvas.Image;
-            let ground = new Image;
-            ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 300, 300); // حجم الصورة
- 
-})
- 
- 
- 
-                let url = getvalueof.displayAvatarURL.endsWith(".webp") ? getvalueof.displayAvatarURL.slice(5, -20) + ".png" : getvalueof.displayAvatarURL;
-                jimp.read(url, (err, ava) => {
-                    if (err) return console.log(err);
-                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                        if (err) return console.log(err);
- 
-                        //ur name
-                        ctx.font = 'bold 16px kathen'; // حجم الخط و نوعه
-                        ctx.fontSize = '40px'; // عرض الخط
-                        ctx.fillStyle = "#000000"; // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${getvalueof.username}`, 153, 173) // احداثيات اسمك
- 
-                        //ur name
-                        ctx.font = 'bold 16px kathen'; // حجم الخط و نوعه
-                        ctx.fontSize = '40px'; // عرض الخط
-                        ctx.fillStyle = "#f1f1f1"; // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${getvalueof.username}`, 151, 171) // احداثيات اسمك
- 
-                        //credit
-                        ctx.font = "bold 12px kathen" // نوع الخط وحجمه
-                        ctx.fontSize = '10px'; // عرض الخط
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`$${profile[getvalueof.id].credits}`, 81, 159) // احداثيات المصاري
- 
-                        //poits
-                        ctx.font = "bold 12px kathen" // ن
-                        ctx.fontSize = '10px'; // عرض الخطوع الخط وحجمه
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${profile[getvalueof.id].points}`, 221, 159) // احداثيات النقاط
- 
-                        //Level
-                        ctx.font = "bold 27px kathen" // نوع الخط و حجمه
-                        ctx.fontSize = '10px'; // عرض الخط
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${profile[getvalueof.id].level}`, 221, 118) // احداثيات اللفل
- 
-                         //info
-                        ctx.font = "bold 12px kathen" // ن
-                        ctx.fontSize = '15px'; // عرض الخطوع الخط وحجمه
-                        ctx.fillStyle = "#000000" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${profile[getvalueof.id].tite}`, 150, 199) // احداثيات النقاط
- 
-                        //info
-                        ctx.font = "bold 12px kathen" // ن
-                        ctx.fontSize = '15px'; // عرض الخطوع الخط وحجمه
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${profile[getvalueof.id].tite}`, 150, 197) // احداثيات النقاط
- 
-                        // REP
-                        ctx.font = "bold 26px  kathen";
-                        ctx.fontSize = "50px";
-                        ctx.fillStyle = "#f1f1f1";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`+${profile[getvalueof.id].rep}`, 80,117)
- 
-                        let Avatar = Canvas.Image;
-                        let ava = new Avatar;
- 
-ava.src = buf;
-                        ctx.beginPath();
-                        ctx.arc(75, 100, 780, 0, Math.PI*2, true);
-                        ctx.closePath();
-                        ctx.clip();
-                        ctx.drawImage(ava, 116, 82, 72, 72);
- 
-message.channel.startTyping()
-message.channel.sendFile(canvas.toBuffer())
-message.channel.stopTyping()
-})
-})
-}
-});
- 
-
-
 
       
       
      
-   client.on('message', message => {
-     if (message.content === "-support") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/TZ3dcyC**")
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
+
 client.on('message', omar => {
 var prefix = "-";
 if(omar.content.split(' ')[0] == prefix + 'dc') {  // delete all channels
@@ -2959,13 +2802,13 @@ Server owner: __${guild.owner}__**`)
 }); 
 			      
 const sWlc = {}
-const premium = ['396958215377780747', '', '', '']
+const premium = ['532613290795335700', '', '', '']
 client.on('message', message => {
 var prefix = "-";
 if(message.channel.type === "dm") return;
 if(message.author.bot) return;
   if(!sWlc[message.guild.id]) sWlc[message.guild.id] = {
-    channel: "welcome"
+    channel: "city"
 }
 const channel = sWlc[message.guild.id].channel
   if (message.content.startsWith(prefix + "setwelcomer")) {
@@ -2981,11 +2824,11 @@ const channel = sWlc[message.guild.id].channel
 
 client.on("guildMemberAdd", member => {
       if(!sWlc[member.guild.id]) sWlc[member.guild.id] = {
-    channel: "welcome"
+    channel: "city"
   }
   const channel = sWlc[member.guild.id].channel
     const sChannel = sWlc[member.guild.id].channel
-    let welcomer = member.guild.channels.find('name', sChannel);
+    let welcomer = member.guild.channels.find('city', sChannel);
     let memberavatar = member.user.avatarURL
       if (!welcomer) return;
       if(welcomer) {
