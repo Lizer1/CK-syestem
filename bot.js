@@ -3103,41 +3103,6 @@ client.on('message', msg => {
 });
 
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
-client.on('message', msg => {
-  if (msg.content === 'شعار') {
-    msg.reply('```الشعار بإسمك بالدسكورد```  , :-
-
-``! CN | , آسمك ``*
-
-```الشعار بإسمك باللعبة``` , :-
-
-``cズ آسمك``**');
-  }
-});
-
-
-
-	  
-	  
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الشعار') {
-    msg.reply('```الشعار بإسمك بالدسكورد```  , :-
-
-``! CN | , آسمك ``*
-
-```الشعار بإسمك باللعبة``` , :-
-
-``cズ آسمك``**');
-  }
-});
 
 
 	  
