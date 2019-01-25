@@ -378,10 +378,6 @@ client.on('message', message => {
   ** -embed | يكرر الي تقولو بشكل حلو**:small_blue_diamond: 
 
   ** -emoji <any things> | لتحويل اي كلمه تقولها الي ايموجي**:small_orange_diamond: 
-
-  ** -inv | لدعوة البوت الى سيرفرك**:black_circle: 
-
-  ** -support | سيرفر الدعم**:wrench:  :envelope_with_arrow: 
   
   ** -contact | ارسال اقتراح او لمراسلة صاحب البوت**
   
@@ -433,7 +429,7 @@ client.on('message', message => {
       if (message.content === "-help-p") {
        const embed = new Discord.RichEmbed() 
            .setColor("#FF00FF")
-           .setFooter('By *LEGEND_YT#4537  ')
+           .setFooter('By LiZer_PRo')
            .setDescription(`**__أتمنى يعجبكم البوت يا أغلى ناس:revolving_hearts: __**`)
      message.author.sendEmbed(embed)
      
