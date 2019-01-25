@@ -162,86 +162,6 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
-              if (!message.channel.guild) return;
-      if(message.content =='حالة الاعضاء')
-      var IzRo = new Discord.RichEmbed()
-      .setThumbnail(message.author.avatarURL)
-      .setFooter(message.author.username, message.author.avatarURL) 
-      .setTitle(':tulip:| Members info')
-      .addBlankField(true)
-      .addField(':green_book:| الاونلاين ',
-      `${message.guild.members.filter(m=>m.presence.status == 'online').size}`)
-      .addField(':closed_book:| دي ان دي',`${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`)
-      .addField(':orange_book:| خامل',`${message.guild.members.filter(m=>m.presence.status == 'idle').size}`)
-      .addField(':notebook:| الاوف لاين ',`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`)
-      .addField('عدد اعضاء السيرفر',`${message.guild.memberCount}`)
-      message.channel.send(IzRo);
-    });
-
-
-
-client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","City Kings"));
-    });
-	
-	
-	
-	client.on('guildMemberAdd', member => {
-  member.guild.fetchInvites().then(guildInvites => {
-    const ei = invites[member.guild.id];
-    invites[member.guild.id] = guildInvites;
-    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
-    const inviter = client.users.get(invite.inviter.id);
-  const logChannel = member.guild.channels.find(channel => channel.name === "city");
-    logChannel.send(`${member} Invited by: <@${inviter.id}>`);
-  });
-});
-
-
-
-client.on('message', message => {
-    if (message.content.startsWith("رابط")) {
-
-  message.channel.createInvite({
-        thing: true,
-        maxUses: 10,
-        maxAge: 86400
-    }).then(invite =>
-      message.author.sendMessage(invite.url)
-    )
-  message.channel.send("**تم ارسال الرابط برسالة خاصة**")
-
-message.author.send(`**مدة الرابط : يـوم
-عدد استخدامات الرابط : 2**`)
-
-
-    }
-});
-
-
-
-client.on("message", msg => {
-           var prefix = "-";
-  if(msg.content.startsWith (prefix + "id")) {
-    if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
-      const embed = new Discord.RichEmbed();
-  embed.addField("🌪  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
-          .addField("🆔  الايدي", `**[ ${msg.author.id} ]**`, true)
-          .setColor("RANDOM")
-          .setFooter(msg.author.username , msg.author.avatarURL)
-          .setThumbnail(`${msg.author.avatarURL}`)
-          .setTimestamp()
-          .setURL(`${msg.author.avatarURL}`)
-          .addField('🕵  الحالة', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
-          .addField('🛰   يلعب', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
-          .addField('🎖  الرتب', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
-          .addField('🤖  هل هو بوت', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
-      msg.channel.send({embed: embed})
-  }
-});
-
-
 
 	
 
@@ -3148,6 +3068,98 @@ channel.guild.owner.send(`<@!${channelremover.id}>
     .setThumbnail(heg.avatarURL);
     message.channel.send(id)
 }       });
+
+
+
+
+
+
+
+
+client.on('message', message => {
+              if (!message.channel.guild) return;
+      if(message.content =='حالة الاعضاء')
+      var IzRo = new Discord.RichEmbed()
+      .setThumbnail(message.author.avatarURL)
+      .setFooter(message.author.username, message.author.avatarURL) 
+      .setTitle(':tulip:| Members info')
+      .addBlankField(true)
+      .addField(':green_book:| الاونلاين ',
+      `${message.guild.members.filter(m=>m.presence.status == 'online').size}`)
+      .addField(':closed_book:| دي ان دي',`${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`)
+      .addField(':orange_book:| خامل',`${message.guild.members.filter(m=>m.presence.status == 'idle').size}`)
+      .addField(':notebook:| الاوف لاين ',`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`)
+      .addField('عدد اعضاء السيرفر',`${message.guild.memberCount}`)
+      message.channel.send(IzRo);
+    });
+
+
+
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","City Kings"));
+    });
+	
+	
+	
+	client.on('guildMemberAdd', member => {
+  member.guild.fetchInvites().then(guildInvites => {
+    const ei = invites[member.guild.id];
+    invites[member.guild.id] = guildInvites;
+    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
+    const inviter = client.users.get(invite.inviter.id);
+  const logChannel = member.guild.channels.find(channel => channel.name === "city");
+    logChannel.send(`${member} Invited by: <@${inviter.id}>`);
+  });
+});
+
+
+
+client.on('message', message => {
+    if (message.content.startsWith("رابط")) {
+
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 10,
+        maxAge: 86400
+    }).then(invite =>
+      message.author.sendMessage(invite.url)
+    )
+  message.channel.send("**تم ارسال الرابط برسالة خاصة**")
+
+message.author.send(`**مدة الرابط : يـوم
+عدد استخدامات الرابط : 2**`)
+
+
+    }
+});
+
+
+
+client.on("message", msg => {
+           var prefix = "-";
+  if(msg.content.startsWith (prefix + "id")) {
+    if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
+      const embed = new Discord.RichEmbed();
+  embed.addField("🌪  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
+          .addField("🆔  الايدي", `**[ ${msg.author.id} ]**`, true)
+          .setColor("RANDOM")
+          .setFooter(msg.author.username , msg.author.avatarURL)
+          .setThumbnail(`${msg.author.avatarURL}`)
+          .setTimestamp()
+          .setURL(`${msg.author.avatarURL}`)
+          .addField('🕵  الحالة', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
+          .addField('🛰   يلعب', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
+          .addField('🎖  الرتب', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
+          .addField('🤖  هل هو بوت', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
+      msg.channel.send({embed: embed})
+  }
+});
+
+
+
+
+
+
 
 
 
