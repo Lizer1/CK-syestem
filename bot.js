@@ -3071,7 +3071,108 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 
+client.on('message', msg => {
+  if (msg.content === 'خط') {
+    msg.reply('https://cdn.pg.sa/xIqykwiEOt.png');
+  }
+});
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === '!') {
+    msg.reply('**#Welcome To City KIngs...:tada::tada:**');
+  }
+});
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === '!') {
+    msg.reply('**#Welcome To City KIngs...:tada::tada:**');
+  }
+});
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'شعار') {
+    msg.reply('```الشعار بإسمك بالدسكورد```  , :-
+
+``! CN | , آسمك ``*
+
+```الشعار بإسمك باللعبة``` , :-
+
+``cズ آسمك``**');
+  }
+});
+
+
+
+	  
+	  
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'الشعار') {
+    msg.reply('```الشعار بإسمك بالدسكورد```  , :-
+
+``! CN | , آسمك ``*
+
+```الشعار بإسمك باللعبة``` , :-
+
+``cズ آسمك``**');
+  }
+});
+
+
+	  
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === '.') {
+    msg.reply('*أطلق ثبات وجودك :kissing_heart::kissing_heart:');
+  }
+});
+
+
+	  
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'برب') {
+    msg.reply('**تيت لا اطول علينا يا غالي**');
+  }
+});
+
+
+	  client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'باك') {
+    msg.reply('**ولكم منور يا عسل**');
+  }
+});
 
 
 
