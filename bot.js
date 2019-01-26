@@ -1083,6 +1083,7 @@ m.sendMessage(args)
 });
 
 client.on('message', message => {
+	
  if(message.content.startsWith(prefix +"سيرفر")){
 if(!message.channel.guild) return message.reply(' ');
 const millis = new Date().getTime() - message.guild.createdAt.getTime();
