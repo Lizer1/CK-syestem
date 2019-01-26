@@ -580,7 +580,7 @@ client.on('message', async msg => {
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 
-					.setFooter("Super Bot")
+					.setFooter("BY LiZer_PRo")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					try {
@@ -841,7 +841,7 @@ var Za7f = [
 ];
 
 client.on('message', message => {
- if (message.content.startsWith("-عقاب")) {
+ if (message.content.startsWith("عقاب")) {
               if(!message.channel.guild) return message.reply('** This command only for servers**');
 var embed = new Discord.RichEmbed()
 .setColor('RANDOM')
@@ -855,7 +855,6 @@ console.log('[38ab] Send By: ' + message.author.username)
 
 
 client.on('message', ra3d => {
-var prefix = "-";
                         let args = ra3d.content.split(" ").slice(1).join(" ")
 if(ra3d.content.startsWith(prefix + 'ccolors')) {
     if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
@@ -872,7 +871,6 @@ if(ra3d.content.startsWith(prefix + 'ccolors')) {
        });
 
 client.on('message', message => {
-var prefix = "-";
 var cats = ["http://www.shuuf.com/shof/uploads/2015/09/09/jpg/shof_b9d73150f90a594.jpg","https://haltaalam.info/wp-content/uploads/2015/05/0.208.png","https://haltaalam.info/wp-content/uploads/2015/05/266.png","https://haltaalam.info/wp-content/uploads/2015/05/250.png","https://haltaalam.info/wp-content/uploads/2017/02/0.2517.png","https://pbs.twimg.com/media/CP0mi02UAAA3U2z.png","http://www.shuuf.com/shof/uploads/2015/08/31/jpg/shof_3b74fa7295ec445.jpg","http://www.shuuf.com/shof/uploads/2015/08/22/jpg/shof_fa3be6ab68fb415.jpg","https://pbs.twimg.com/media/CSWPvmRUcAAeZbt.png","https://pbs.twimg.com/media/B18VworIcAIMGsE.png"]
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'هل تعلم')) {
@@ -1075,7 +1073,7 @@ client.on('message', message => {
 client.on('message', message => {
         if(!message.channel.guild) return;
 let args = message.content.split(' ').join(" ");
-if (message.content.startsWith('-legend')){
+if (message.content.startsWith('bc')){
 if (message.author.id !== '532613290795335700') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -1085,8 +1083,7 @@ m.sendMessage(args)
 });
 
 client.on('message', message => {
-	 var prefix ="-";
- if(message.content.startsWith(prefix +"server")){
+ if(message.content.startsWith(prefix +"سيرفر")){
 if(!message.channel.guild) return message.reply(' ');
 const millis = new Date().getTime() - message.guild.createdAt.getTime();
 const now = new Date();
@@ -1115,7 +1112,7 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO Super Bot`` ')
+            .setTitle('``INFO BY Lizer_PRo`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -1136,9 +1133,8 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	var prefix = "-";
 if(!message.channel.guild) return;
-if(message.content.startsWith(prefix + 'move')) {
+if(message.content.startsWith(prefix + 'تحرك')) {
  if (message.member.hasPermission("MOVE_MEMBERS")) {
  if (message.mentions.users.size === 0) {
  return message.channel.send("``لاستخدام الأمر اكتب هذه الأمر : " +prefix+ "move [USER]``")
@@ -1183,8 +1179,7 @@ message.react("❌")
 
  client.on("message", async message => {
             if(!message.channel.guild) return;
-            var prefix = "-";
-        if(message.content.startsWith(prefix + 'invites')) {
+        if(message.content.startsWith(prefix + 'invite')) {
         var nul = 0
         var guild = message.guild
         await guild.fetchInvites()
@@ -1264,9 +1259,8 @@ client.on('message', msg => {
 });
 
 client.on('message', message => { 
-	var prefix = "-";
  let args = message.content.split(' ').slice(1);
-    if(message.content.startsWith(prefix + 'short')) {
+    if(message.content.startsWith(prefix + 'قص')) {
     if(!message.channel.guild) return;  
 
         googl.setKey('AIzaSyC2Z2mZ_nZTcSvh3QvIyrmOIFP6Ra6co6w');
@@ -1315,9 +1309,8 @@ function getValue(key, array) {
 }
 
  client.on('message', message => {
-	    var prefix = "-";
               if(!message.channel.guild) return;
-    if(message.content.startsWith(prefix + 'bc')) {
+    if(message.content.startsWith(prefix + 'obc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -1712,7 +1705,7 @@ msg.channel.send(embed).then(() => {
 
 client.on('ready', function(){	
     var ms = 40000 ;	
-    var setGame = ['BY LiZer_PRO','-help'];	
+    var setGame = ['شكشوكة المنيوكة'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -1908,14 +1901,13 @@ client.on('message', message => {
 
  
 client.on('message', msg => {
-	var prefix = "-";
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
   let command = msg.content.split(" ")[0];
   command = command.slice(prefix.length);
   let args = msg.content.split(" ").slice(1);
 
-    if(command === "c") {
+    if(command === "مسح") {
         const emoji = client.emojis.find("name", "wastebasket")
     let textxt = args.slice(0).join("");
     if(msg.member.hasPermission("MANAGE_MESSAGES")) {
@@ -1960,13 +1952,12 @@ message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخ�
 
 client.on('message', async message =>{
   if (message.author.boss) return;
-	var prefix = "-";
 
 if (!message.content.startsWith(prefix)) return;
 	let command = message.content.split(" ")[0];
 	 command = command.slice(prefix.length);
 	let args = message.content.split(" ").slice(1);
-	if (command == "mute") {
+	if (command == "اسكت") {
 		if (!message.channel.guild) return;
 		if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("انت لا تملك صلاحيات !! ").then(msg => msg.delete(5000));
 		if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("البوت لايملك صلاحيات ").then(msg => msg.delete(5000));;
@@ -1997,7 +1988,7 @@ ${message.author.tag} تمت معاقبتك بواسطة
 		.setColor("RANDOM")
 	user.send( muteembeddm);
   }
-if(command === `unmute`) {
+if(command === `تكلم`) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.sendMessage("**ليس لديك صلاحية لفك عن الشخص ميوت**:x: ").then(m => m.delete(5000));
 if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("**ما عندي برمشن**").then(msg => msg.delete(6000))
 
@@ -2021,7 +2012,6 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
 
 
     client.on('message', message => {
-var prefix = "-";
 var cats = ["http://palestine-kitchen.ps/wp-content/uploads/2017/12/%D9%86%D9%83%D8%AA-%D8%AF%D8%A8%D8%A7%D9%86%D8%A9.png","http://www.i7lm.com/wp-content/uploads/2017/04/136769797816.jpg","https://4.bp.blogspot.com/-p62zmDIDXmI/WKzqNt9smaI/AAAAAAAAC4Q/sW_bSIB8OaQhwOYFeplc3uzz8PBN7l3YACEw/s1600/13602501135.jpg","https://www.universemagic.com/images/2016/03/7938-2-or-1457539273.jpg","https://1.bp.blogspot.com/-yFk-FzHSyE8/WR9fmPcsCUI/AAAAAAAAE6c/AmvjLadOiLY9GiCqMLHgA121bY2RS_dCwCLcB/s1600/%25D9%2586%25D9%2583%25D8%25AA%2B%25D9%2585%25D8%25B6%25D8%25AD%25D9%2583%25D8%25A9%2B1.jpg","https://l7zaat.com/wp-content/uploads/2018/02/423.jpg","https://www.petfinder.com/wp-content/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg","https://i.fatafeat.com/storage/attachments/15/image3_698123_large.jpg","http://www.shuuf.com/shof/uploads/2018/02/08/jpg/shof_97d686082bdb0a2.jpg"];
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'نكت')) {
@@ -2068,7 +2058,6 @@ var fkk =[
 
 
    client.on("message", async message => {
-	   var prefix = "-";
     if(message.content == prefix+"فكك"){
         if(UserBlocked.has(message.guild.id)) return message.channel.send("هناك جلسة .")
         UserBlocked.add(message.guild.id)
@@ -2213,11 +2202,10 @@ var aoasm =[
 });
 
 client.on("message", message => {
-    const prefix = "-"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
-      if(message.content === prefix + "image"){ 
+      if(message.content === prefix + "صورة السيرفر"){ 
           const embed = new Discord.RichEmbed()
   
       .setTitle(`This is  ** ${message.guild.name} **  Photo !`)
@@ -2234,7 +2222,6 @@ client.on("message", message => {
 
 const cuttweet = [     'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',     'كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',     'كت تويت | الحرية لـ ... ؟',     'كت تويت | قناة الكرتون المفضلة في طفولتك؟',     'كت تويت ‏| كلمة للصُداع؟',     'كت تويت ‏| ما الشيء الذي يُفارقك؟',     'كت تويت ‏| ما الشيء الذي يُفارقك؟',     'كت تويت | ��وقف مميز فعلته مع شخص ولا يزال يذكره لك؟',     'كت تويت ‏| أيهما ينتصر، الكبرياء أم الحب؟',     'كت تويت | بعد ١٠ سنين ايش بتكون ؟',     'كت تويت ‏| مِن أغرب وأجمل الأسماء التي مرت عليك؟',     '‏كت تويت | عمرك شلت مصيبة عن ش��������ص برغبتك ؟',     'كت تويت | أكثر سؤال وجِّه إليك مؤخرًا؟',     '‏كت تويت | ما هو الشيء الذي يجعلك تشعر بالخوف؟',     '‏كت تويت | وش يفسد الصداقة؟',     '‏كت تويت | شخص لاترفض له طلبا ؟',     '‏كت تويت | كم مره خسرت شخص تحبه؟.',     '‏كت تويت | كيف تتعامل مع الاشخاص السلبيين ؟',     '‏كت تويت | كلمة تشعر بالخجل اذا قيلت لك؟',     '‏كت تويت | جسمك اكبر من عٌمرك او العكسّ ؟!',     '‏كت تويت |أقوى كذبة مشت عليك ؟',     '‏كت تويت | تتأثر بدموع شخص يبكي قدامك قبل تعرف السبب ؟',     'كت تويت | هل حدث وضحيت من أجل شخصٍ أحببت؟',     '‏كت تويت | أكثر تطبيق تستخدمه مؤخرًا؟',     '‏كت تويت | ‏اكثر شي يرضيك اذا زعلت بدون تفكير ؟',     '‏كت تويت | وش محتاج عشان تكون مبسوط ؟',     '‏كت تويت | مطلبك الوحيد الحين ؟',     '‏كت تويت | هل حدث وشعرت بأنك ارتكبت أحد الذنوب أثناء الصيام؟',];
  client.on('message', message => {
-	   var prefix = "-";
    if (message.content.startsWith(prefix + "كت تويت")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
@@ -2351,7 +2338,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("By : LEGEND_YT#4537 ")
+     .setFooter("By LiZer_PRo")
                                                 
 
 message.channel.send(embed);
@@ -2362,7 +2349,6 @@ message.channel.send(embed);
 });
 
 client.on('message', message => {
-	var prefix = "-"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -2371,7 +2357,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "ban") {
+  if (command == "بان") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**You Don't Have ` BAN_MEMBERS ` Permission**");
@@ -2401,7 +2387,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-	var prefix = "-"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -2410,7 +2395,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "kick") {
+  if (command == "كيك") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
   if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**You Don't Have ` KICK_MEMBERS ` Permission**");
@@ -2439,8 +2424,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-var prefix = "-";
-       if(message.content === prefix + "mutechannel") {
+       if(message.content === prefix + "قفل") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
@@ -2452,7 +2436,7 @@ var prefix = "-";
               });
                 }
 //FIRE BOT
-    if(message.content === prefix + "unmutechannel") {
+    if(message.content === prefix + "فتح") {
                         if(!message.channel.guild) return message.reply('** This command only for servers**');
 
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
@@ -2469,7 +2453,7 @@ var prefix = "-";
 
 
 client.on('message', message => {
-    if (message.content.startsWith("-bans")) {
+    if (message.content.startsWith("عدد البان")) {
         message.guild.fetchBans()
         .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
   .catch(console.error);
@@ -2481,7 +2465,7 @@ client.on('message', message => {
  
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
+  return channel.send(`:rose: CO:CLAN ولكم نورت السيرفر:rose: 
 :crown:اسم العضو  ${member}:crown:  
 انت العضو رقم ${member.guild.memberCount} `) 
 }).catch(console.error)
@@ -2500,7 +2484,7 @@ client.on('message', message => {
 });
  
 client.on('message', message => {
-    if (message.content.startsWith("-avatar")) {
+    if (message.content.startsWith("صورة")) {
 if(!message.channel.guild) return;
         var mentionned = message.mentions.users.first();
     var client;
@@ -2590,7 +2574,7 @@ if (message.content.startsWith(prefix + 'credit')) {
   if(men) {
     if (!profile[men.id]) profile[men.id] = {
     lastDaily:'Not Collected',
-    credits: 1,
+    credits: 25,
   };
   }
   if(men) {
@@ -2704,9 +2688,8 @@ omar.reply("`تم حذف جميع الرتب بنجاح`")
 });
 
 client.on('message', message => {
-	var prefix = "-";
    if(!message.channel.guild) return;
-if(message.content.startsWith(prefix + 'clear')) {
+if(message.content.startsWith(prefix + 'مسح شات')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**You Do not have permission** `MANAGE_MESSAGES`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -2770,19 +2753,6 @@ if (message.content.startsWith("-cv")) {
 
 // THIS  MUST  BE  THIS  WAY
 
-client.on('message' , message => { 
-    var prefix = "-";
-     if (message.content === prefix + "servers") {
-
-if(!message.channel.guild) return;
-  if(message.content < 1023) return
-  const Embed11 = new Discord.RichEmbed()
-.setAuthor(client.user.username,client.user.avatarURL)
-.setThumbnail(client.user.avatarURL)
-.setDescription(`***السيرفرات الموجودة فيه البوت ${client.guilds.size} \n \n${client.guilds.map(guilds => `- ${guilds.name}`).join('\n')}***`)
-         message.channel.sendEmbed(Embed11)
-    }
-});
 
 
 			      
@@ -2949,7 +2919,7 @@ npm i discord.js
 */
 var guilds = {};
 client.on('guildBanAdd', function(guild) {
-            const rebellog = client.channels.find("log", "log"),
+            const rebellog = client.channels.find("log"),
             Onumber = 3,
   Otime = 10000
 guild.fetchAuditLogs({
@@ -3014,7 +2984,7 @@ channel.guild.owner.send(`<@!${channelcreate.id}>
 
 let channelr = {};
   client.on('channelDelete', async (channel) => {
-  const rebellog = client.channels.find("log", "log"),
+  const rebellog = client.channels.find("log"),
   Oguild = channel.guild,
   Onumber = 3,
   Otime = 10000;
