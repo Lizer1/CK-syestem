@@ -1083,7 +1083,7 @@ m.sendMessage(args)
 });
 
 client.on('message', message => {
-	
+    var prefix = "-";
  if(message.content.startsWith(prefix +"سيرفر")){
 if(!message.channel.guild) return message.reply(' ');
 const millis = new Date().getTime() - message.guild.createdAt.getTime();
@@ -1134,6 +1134,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
+    var prefix = "-";	
 if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'تحرك')) {
  if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -1260,6 +1261,7 @@ client.on('message', msg => {
 });
 
 client.on('message', message => { 
+    var prefix = "-";	
  let args = message.content.split(' ').slice(1);
     if(message.content.startsWith(prefix + 'قص')) {
     if(!message.channel.guild) return;  
@@ -1311,6 +1313,7 @@ function getValue(key, array) {
 
  client.on('message', message => {
               if(!message.channel.guild) return;
+    var prefix = "-";	 
     if(message.content.startsWith(prefix + 'obc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
@@ -1705,7 +1708,7 @@ msg.channel.send(embed).then(() => {
 
 
 client.on('ready', function(){	
-    var ms = 40000 ;	
+    var ms = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 ;	
     var setGame = ['شكشوكة المنيوكة'];	
     var i = -1;	
     var j = 0;	
@@ -1902,6 +1905,7 @@ client.on('message', message => {
 
  
 client.on('message', msg => {
+    var prefix = "-";	
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
   let command = msg.content.split(" ")[0];
@@ -1952,6 +1956,7 @@ message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخ�
 
 
 client.on('message', async message =>{
+    var prefix = "-";	
   if (message.author.boss) return;
 
 if (!message.content.startsWith(prefix)) return;
@@ -2059,6 +2064,7 @@ var fkk =[
 
 
    client.on("message", async message => {
+    var prefix = "-";	   
     if(message.content == prefix+"فكك"){
         if(UserBlocked.has(message.guild.id)) return message.channel.send("هناك جلسة .")
         UserBlocked.add(message.guild.id)
@@ -2203,7 +2209,7 @@ var aoasm =[
 });
 
 client.on("message", message => {
-              
+    var prefix = "-";              
           if(!message.channel.guild) return;
    if(message.author.bot) return;
       if(message.content === prefix + "صورة السيرفر"){ 
@@ -2350,6 +2356,7 @@ message.channel.send(embed);
 });
 
 client.on('message', message => {
+    var prefix = "-";	   
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -2388,6 +2395,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    var prefix = "-";	    
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -2425,6 +2433,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
+    var prefix = "-";	
        if(message.content === prefix + "قفل") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
@@ -2454,6 +2463,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
+    var prefix = "-";	
     if (message.content.startsWith("عدد البان")) {
         message.guild.fetchBans()
         .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
@@ -2485,6 +2495,7 @@ client.on('message', message => {
 });
  
 client.on('message', message => {
+    var prefix = "-";	
     if (message.content.startsWith("صورة")) {
 if(!message.channel.guild) return;
         var mentionned = message.mentions.users.first();
@@ -2545,7 +2556,7 @@ if (err) console.error(err);
 });
  
 client.on('message', message => {
- 
+     var prefix = "-";
     if(message.content.startsWith(prefix + 'rep')) {
       if(!message.channel.guild) return;
                     moment.locale('en');
@@ -2566,6 +2577,7 @@ if (err) console.error(err);
 });
  
 client.on("message", (message) => {
+	    var prefix = "-";
   let men = message.mentions.users.first()
  
   if (message.author.bot) return;
@@ -2689,6 +2701,7 @@ omar.reply("`تم حذف جميع الرتب بنجاح`")
 });
 
 client.on('message', message => {
+    var prefix = "-";	
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'مسح شات')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
@@ -2806,7 +2819,7 @@ client.on("guildMemberAdd", member => {
   }
   const channel = sWlc[member.guild.id].channel
     const sChannel = sWlc[member.guild.id].channel
-    let welcomer = member.guild.channels.find('city', sChannel);
+    let welcomer = member.guild.channels.find('city');
     let memberavatar = member.user.avatarURL
       if (!welcomer) return;
       if(welcomer) {
@@ -2958,7 +2971,7 @@ console.log(error)
 });
  let channelc = {};
   client.on('channelCreate', async (channel) => {
-  const rebellog = client.channels.find("log", "log"),
+  const rebellog = client.channels.find("log"),
   Oguild = channel.guild,
   Onumber = 3,
   Otime = 10000;
@@ -3056,7 +3069,7 @@ client.on('message', message => {
   message.channel.send("**تم ارسال الرابط برسالة خاصة**")
 
 message.author.send(`**مدة الرابط : يـوم
-عدد استخدامات الرابط : 2**`)
+عدد استخدامات الرابط : 10**`)
 
 
     }
