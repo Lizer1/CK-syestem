@@ -54,5 +54,18 @@ client.on("reachLimit", (limit)=> {
     limit.member.removeRole(role.id) 
     .catch(log.send)
   });
+  
 });
-client.login("NTM5MDg0Njc4NzIwOTEzNDA4.DzMj3A.883DYIDFH9ufWi-z4nqD9iEH7ZQ");
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : i1Suhaib`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`CO Security BY LiZer_PRo`,"http://twitch.tv/S-F")
+client.user.setStatus("dnd")
+});
+
+client.login(process.env.BOT_TOKEN);
+
